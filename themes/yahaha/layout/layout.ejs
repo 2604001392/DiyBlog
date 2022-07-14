@@ -7,7 +7,9 @@
     <!-- 引入配置文件 -->
     <%- css('css/main.css') %>
      <!-- 字体图片库 -->
-     <%- css('lib/fontawesome/css/fontawesome.css') %>
+     <%- css('lib/fontawesome/css/font-awesome') %>
+     <!-- 代码高亮库 -->
+    <%- css('/lib/highlight/styles/atom-one-dark.min') %>
 </head>
 <body>
 
@@ -24,13 +26,29 @@
 
         <!-- 引入正文 -->
         <div id="content">
-      <%- body %>
+            <%- body %>
         </div>
         
     </div>
 
     <!-- 引入 js 文件 -->
-    <%- js('js/main.js') %>
+    <%- js('/lib/jquery-3.4.1.min') %>
 
+    <!-- 引入代码高亮的 js -->
+    <%- js('/lib/highlight/highlight.min.js') %>
+
+    <!-- 引入 pjax -->
+    <%- js('/lib/jquery.pjax.js') %>
+
+    <!--引入js文件-->
+    <%- js('js/main.js') %> 
+
+    <!--看板娘-->
+    <%- js('lib/L2Dwidget') %> 
 </body>
 </html>
+
+<script type="text/javascript">
+L2Dwidget.init();
+</script>
+
